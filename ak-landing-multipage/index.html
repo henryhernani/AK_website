@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTRO KEY</title>
+  <meta name="description" content="Pantalla de entrada — Astro Key (AK)">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .splash { min-height:100vh; display:grid; place-items:center; background:#000; color:#fff; }
+    .splash .center { text-align:center; }
+    .splash .logo { cursor:pointer; max-width:1250px; height:auto; }
+    .enter-hint { margin-top:18px; font-size:20px; letter-spacing:.06em; text-transform:uppercase; color:#aaa; }
+    .blink { animation: blink 1.3s infinite steps(2); }
+    @keyframes blink { 50% { opacity:.35; } }
+  </style>
+</head>
+
+<body>
+  <main class="splash" role="main">
+    <div class="center">
+      <img src="img/AK-simbolo-negro.jpg" alt="Astro Key" class="logo" tabindex="0">
+      <div class="enter-hint blink"> PRESS THE KEY </div>
+    </div>
+  </main>
+  <script>
+    const go = () => { window.location.href = "menu.html"; };
+    document.querySelector(".splash").addEventListener("click", go);
+    document.addEventListener("keydown", (e)=>{
+      const k = e.key.toLowerCase();
+      if (k === "enter" || k === " " || k === "spacebar") go();
+    });
+  </script>
+</body>
+</html>

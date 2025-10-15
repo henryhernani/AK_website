@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AK CONTACT</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="brand">
+      <a href="menu.html" class="back" style="position:absolute; left:16px; top:16px; color:#888; text-decoration:none;">⟵ Menu</a>
+      <img src="img/AK-simbolo-negro.jpg" alt="Astro Key" class="logo">
+    </header>
+
+    <main class="section">
+      
+<h1>Contact</h1>
+<p>¿Quieres colaborar o enviar una demo?</p>
+<form onsubmit="event.preventDefault(); alert('Mensaje enviado (demo).'); this.reset();" style="display:grid; gap:10px; max-width:520px">
+  <input required placeholder="Tu email" type="email" style="padding:14px 12px; background:#000; border:1px solid #222; color:#fff">
+  <textarea required placeholder="Mensaje" style="padding:14px 12px; min-height:120px; background:#000; border:1px solid #222; color:#fff"></textarea>
+  <button class="tile" type="submit" style="cursor:pointer; justify-content:center"><strong>Enviar</strong></button>
+</form>
+
+    </main>
+
+    <footer>
+      <small>© <span id="y"></span> ASTRO KEY ALL RIGHTS RESERVED</small>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
